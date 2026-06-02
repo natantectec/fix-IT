@@ -3,35 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fix-IT - עוזר אישי למחשב</title>
+  <title>Fix-IT - עוזר אישי למחשב | Natan-Tec</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
     <header>
       <img src="https://i.ibb.co/ZHY5Jkk/logo-small.png" alt="Natan Tec Logo" class="logo">
-      <h1>Fix-IT - עוזר אישי מבית <span class="natan">Natan-Tec</span></h1>
+      <h1>Fix-IT – עוזר אישי מבית <span class="natan">Natan-Tec</span></h1>
     </header>
-    
+
     <div class="chat-box" id="chat-box">
-      <div class="bubble suggestion" onclick="sendMessage('המחשב לא נדלק לי')">המחשב לא נדלק לי</div>
-      <div class="bubble suggestion" onclick="sendMessage('שבר במסך')">שבר במסך</div>
-      <div class="bubble suggestion" onclick="sendMessage('נשפך לי מים על המחשב')">נשפך לי מים על המחשב</div>
-      <div class="bubble suggestion" onclick="sendMessage('כמה יעלה לי לתקן?')">כמה יעלה לי לתקן?</div>
-      <div class="bubble suggestion" onclick="sendMessage('אני צריך פירמוט')">אני צריך פירמוט</div>
-      <div class="bubble suggestion" onclick="sendMessage('תיקון שקע טעינה')">תיקון שקע טעינה</div>
+      <div class="message-wrapper bot">
+        <div class="bubble bot">היי! אני Fix-IT 👋 העוזר הטכני של Natan-Tec.
+שאל אותי על כל בעיית מחשב – אשמח לעזור 😊</div>
+      </div>
+      <div class="message-wrapper bot">
+        <div class="bubble suggestion" onclick="sendMessage('המחשב לא נדלק לי')">💻 המחשב לא נדלק</div>
+      </div>
+      <div class="message-wrapper bot">
+        <div class="bubble suggestion" onclick="sendMessage('שבר במסך')">🖥️ שבר במסך</div>
+      </div>
+      <div class="message-wrapper bot">
+        <div class="bubble suggestion" onclick="sendMessage('נשפך לי מים על המחשב')">💧 נשפך מים על המחשב</div>
+      </div>
+      <div class="message-wrapper bot">
+        <div class="bubble suggestion" onclick="sendMessage('כמה עולה פירמוט?')">💰 מחיר פירמוט</div>
+      </div>
+      <div class="message-wrapper bot">
+        <div class="bubble suggestion" onclick="sendMessage('המחשב איטי מאוד')">🐢 מחשב איטי</div>
+      </div>
+      <div class="message-wrapper bot">
+        <div class="bubble suggestion" onclick="sendMessage('תיקון שקע טעינה')">🔌 תיקון שקע טעינה</div>
+      </div>
     </div>
 
     <div class="chat-input-area">
-      <textarea id="user-input" placeholder="כתוב הודעה..." rows="1" onkeydown="handleKey(event)"></textarea>
       <button onclick="sendMessage()">שלח</button>
+      <textarea id="user-input" placeholder="כתוב את הבעיה שלך..." rows="1" onkeydown="handleKey(event)"></textarea>
     </div>
-    
+
     <footer>
-      <p>Powered by <strong>Natan-Tec</strong> | אין אחריות על חוסר שינה ממחשבים לא עובדים</p>
+      <p>Powered by <strong>Natan-Tec</strong></p>
+      <p id="joke-line"></p>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
