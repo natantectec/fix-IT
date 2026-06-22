@@ -13,7 +13,6 @@ const port = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -42,7 +41,7 @@ const SYSTEM_PROMPT = `
 2. אל תמציא מידע. אם אינך בטוח – אמור זאת ישירות.
 
 3. תמחור: השתמש במחירון הבא בלבד. אל תמציא מחירים.
-${priceData}
+` + priceData + `
 
 4. הפניה לנתן-טק – חובה במקרים הבאים:
    - הבעיה דורשת פתיחת מחשב / עבודה על חומרה פיזית
